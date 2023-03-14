@@ -20,6 +20,16 @@ public class KhachHangServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws ServletException, IOException {
+        String uri = request.getRequestURI();
+        if (uri.contains("create")){
+            this.create(request, response);
+        }else if (uri.contains("edit")){
+            //edit
+        } else if(uri.contains("delete")){
+            //delete
+        } else {
+            this.index(request, response);
+        }
         this.create(request, response);
     }
 
@@ -36,7 +46,7 @@ public class KhachHangServlet extends HttpServlet {
         HttpServletResponse response
     ) throws ServletException, IOException {
         String tenDem = request.getParameter("ten_dem");
-        System.out.println("aaaaaaaa");
+        System.out.println("Họ tên khách hàng là :");
         System.out.println(tenDem);
     }
 
@@ -45,6 +55,14 @@ public class KhachHangServlet extends HttpServlet {
             HttpServletResponse response
     ) throws ServletException, IOException {
         request.getRequestDispatcher("/views/khach_hang/create.jsp")
+                .forward(request, response);
+    }
+
+    protected void index(
+            HttpServletRequest request,
+            HttpServletResponse response
+    ) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/khach_hang/index.jsp")
                 .forward(request, response);
     }
 }
