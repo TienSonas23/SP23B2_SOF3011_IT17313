@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="col-8 offset-2">
+        <h1 style="text-align: center; font-family: 'Bodoni MT'">Thêm mới Nhân Viên</h1>
         <form method="POST"
               action="/SP23B2_SOF3011_IT17313_war_exploded/nhan_vien/store">
             <div class="row mt-3">
