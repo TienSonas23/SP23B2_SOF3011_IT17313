@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Xin chào ${ hoTen }</h1>
+    <h1>Chào mừng ${ hoTen } Đến với Java 4.</h1>
 </body>
 </html>

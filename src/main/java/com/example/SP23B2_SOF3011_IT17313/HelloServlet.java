@@ -18,7 +18,7 @@ public class HelloServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws IOException, ServletException {
-        String name = "TienNH21";
+        String name = "TIEN PH23754";
         request.setAttribute("hoTen", name);
         request.getRequestDispatcher("/views/hello.jsp")
             .forward(request, response);

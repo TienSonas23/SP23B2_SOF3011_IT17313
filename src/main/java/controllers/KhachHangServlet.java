@@ -67,7 +67,7 @@ public class KhachHangServlet extends HttpServlet {
             HttpServletRequest request,
             HttpServletResponse response
     ) throws ServletException, IOException {
-        request.setAttribute("danhsachKH", list);
+        request.setAttribute("danhSachKH", list);
         request.getRequestDispatcher("/views/khach_hang/index.jsp")
                 .forward(request, response);
     }
